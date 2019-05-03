@@ -3,8 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sarinaditya/docker-react -f Dockerfile.dev
+  - docker build -t sarinaditya/docker-react -f Dockerfile.dev .
 
 script:
   - docker run sarinaditya/docker-react npm run test -- --coverage
-  
